@@ -1,0 +1,115 @@
+Q1. What is a Convolutional Neural Network (CNN), and why is it used for image processing
+Ans.
+A Convolutional Neural Network (CNN) is a type of neural network specifically designed for processing structured data like images.
+It is used for image processing because it can automatically detect spatial hierarchies and patterns (edges, textures, shapes) without manual feature extraction. CNNs are efficient in image tasks like classification, object detection, and segmentation.
+
+
+Q2. What are the key components of a CNN architecture
+Ans.
+Convolutional Layers – Extract spatial features by applying filters (kernels) to the input.
+Pooling Layers – Downsample the feature maps to reduce dimensions and computational load.
+Activation Functions – Introduce non-linearity (e.g., ReLU).
+Fully Connected Layers – Flatten the output and make final predictions.
+Dropout Layers – Reduce overfitting by randomly setting neurons to zero.
+Batch Normalization – Normalize outputs to speed up training and improve stability.
+
+
+Q3. What is the role of the convolutional layer in CNNs
+Ans.
+The convolutional layer applies filters (kernels) to the input data to extract features such as edges, textures, and shapes.
+Each filter slides (convolves) over the input image and produces a feature map.
+This operation captures spatial relationships in the data.
+
+
+Q4. What is a filter (kernel) in CNNs
+Ans.
+A filter (kernel) is a small matrix (e.g., 3x3) that slides over the input to detect specific patterns.
+Each filter has trainable weights that are updated during training.
+
+Q5. What is pooling in CNNs, and why is it important
+Ans.
+Pooling reduces the size of feature maps, preserving essential information while lowering computational costs.
+It helps make CNNs more robust to translation (small changes in position).
+Pooling also helps prevent overfitting by reducing the complexity of the model.
+
+Q6. What are the common types of pooling used in CNNs
+Ans. Max pooling,average pooling,Global average pooling
+
+
+Q7. How does the backpropagation algorithm work in CNN
+Ans.
+Forward Pass: Input data propagates through the network, producing predictions.
+Loss Calculation: Compare predictions with actual labels using a loss function.
+Backward Pass: Compute gradients of the loss with respect to weights using the chain rule.
+Weight Updates: Update weights using an optimizer (e.g., SGD, Adam) to minimize the loss.
+
+Q8. What is the role of activation functions in CNNs
+Ans.
+Activation functions introduce non-linearity, allowing the network to learn complex patterns.
+
+Q9. What is the concept of receptive fields in CNNs
+Ans.
+A receptive field is the region of the input that influences a particular neuron’s output.
+As you move deeper into the network, the receptive field increases, capturing more contextual information.
+Larger receptive fields help detect complex patterns and objects.
+
+
+Q10. Explain the concept of tensor space in CNNs
+Ans.
+In CNNs, data is represented as tensors (multi-dimensional arrays).
+Example: A color image of size 32x32x3 (height, width, channels) is a 3D tensor.
+CNN operations (convolution, pooling) manipulate these tensors to extract and compress features.
+
+
+
+Q11. What is LeNet-5, and how does it contribute to the development of CNNs
+Ans.
+LeNet-5 (developed by Yann LeCun in 1998) was one of the first CNNs used for digit recognition.
+Key contributions:
+Demonstrated the effectiveness of CNNs for image classification.
+Introduced convolutional, pooling, and fully connected layers in a structured way.
+
+Q12. What is AlexNet, and why was it a breakthrough in deep learning
+Ans.
+AlexNet (developed by Alex Krizhevsky in 2012) won the ImageNet competition.
+Innovations:
+Deep architecture (8 layers).
+Used ReLU activation for faster training.
+Employed dropout to prevent overfitting.
+Utilized GPUs for training, making deeper networks feasible.
+
+
+
+Q13. What is VGGNet, and how does it differ from AlexNet
+Ans.
+VGGNet (developed by Oxford’s Visual Geometry Group in 2014) is known for its deep and uniform architecture.
+Differences from AlexNet:
+Uses smaller filters (3x3) but stacks more layers (16-19 layers).
+Simplified design with repeated blocks of convolutional and pooling layers.
+
+
+
+Q14.What is GoogLeNet, and what is its main innovation
+Ans.
+GoogLeNet (developed by Google in 2014) introduced the Inception module.
+Main innovation:
+Efficiently reduces the number of parameters by combining different filter sizes (1x1, 3x3, 5x5) in parallel.
+Deeper architecture (22 layers) with fewer parameters compared to VGGNet.
+
+
+Q15. What is ResNet, and what problem does it solve
+Ans.
+ResNet (developed by Microsoft in 2015) introduced residual connections (skip connections).
+Solves the vanishing gradient problem in deep networks by allowing gradients to flow through skip connections.
+Enabled the training of very deep networks (e.g., 50, 101, 152 layers).
+
+
+Q16.What is DenseNet, and how does it differ from ResNet
+Ans.
+DenseNet (developed in 2017) connects each layer to every preceding layer.
+Differences from ResNet:
+Dense connections improve information flow and reduce redundancy.
+Requires fewer parameters than ResNet while achieving similar or better accuracy.
+Q17. What are the main steps involved in training a CNN from scratch?
+Ans.
+Prepare data set>>Split Data>>Build the model>>Initilaize weight>>Complitr the model>>Train the model>>Evaluate>>Fine tune>.Deploy thr model
